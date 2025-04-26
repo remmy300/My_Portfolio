@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="m-3">Connect</h3>
+          <h3 className="m-3 font-bold">Connect</h3>
           <div className="flex justify-center md:justify-start text-2xl gap-4">
             <a href="https://github.com/remmy300" target="_blank">
               <FaGithub className="size-10 " />

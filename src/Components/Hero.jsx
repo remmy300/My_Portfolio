@@ -55,16 +55,24 @@ const Hero = () => {
             "Turning ideas into reality—one line of code at a time."
           </motion.p>
         </div>
-        <div className="w-full lg:w-1/2 justify-center items-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
           {/* Profile Image with Animation */}
-          <motion.img
-            src={profile}
-            alt="Jentah Rehema"
-            className="h-60 w-60  sm:w-72 sm:h-72 lg:w-80 lg:h-80  rounded-full mb-8 border-4 border-white shadow-2xl"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.8)",
+            }}
+            transition={{ duration: 0.6, ease: "easeInOut", type: "spring" }}
+            className="flex justify-center items-center"
+          >
+            <img
+              src={profile}
+              alt="Jentah Rehema"
+              className="h-60 w-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full mb-8 border-4 border-white shadow-2xl object-cover"
+            />
+          </motion.div>
         </div>
       </motion.section>
     </>
